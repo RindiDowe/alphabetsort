@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -233,12 +234,20 @@
                     letterSpan.className = 'relative z-10 drop-shadow-lg letter-span';
                     letterDiv.appendChild(letterSpan);
                     
-                    // Add helper font for 'a' and 'g' letters
-                    if (letterObj.letter === 'a' || letterObj.letter === 'g') {
+                    // Add helper font for 'a', 'g', and uppercase 'I' letters
+                    if (letterObj.letter === 'a' || letterObj.letter === 'g' || letterObj.letter === 'I') {
                         const helperSpan = document.createElement('span');
-                        helperSpan.textContent = letterObj.letter;
-                        helperSpan.className = 'absolute bottom-1 right-1 text-xs text-yellow-200 drop-shadow-sm';
-                        helperSpan.style.fontFamily = 'Arial, sans-serif';
+                        if (letterObj.letter === 'I') {
+                            helperSpan.textContent = '(I)';
+                            helperSpan.style.fontFamily = 'Arial, Helvetica, sans-serif';
+                        } else {
+                            helperSpan.textContent = `(${letterObj.letter})`;
+                            helperSpan.style.fontFamily = '"Comic Sans MS", "Marker Felt", "Bradley Hand", cursive';
+                        }
+                        helperSpan.className = 'absolute bottom-1 right-1 text-lg text-yellow-100 drop-shadow-lg';
+                        helperSpan.style.fontWeight = 'normal';
+                        helperSpan.style.fontStyle = 'normal';
+                        helperSpan.style.pointerEvents = 'none';
                         letterDiv.appendChild(helperSpan);
                     }
                     
@@ -490,6 +499,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99512fcbb1be7d4c',t:'MTc2MTU1NzU1Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99513e7d84586754',t:'MTc2MTU1ODE1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
